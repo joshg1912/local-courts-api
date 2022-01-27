@@ -12,4 +12,15 @@ class UsersController < ApplicationController
             render json: { errors: user.errors.full_messages }, status: :bad_request
         end
     end
+
+    def index
+        users = User.all
+        render json: users
+    end
+
+    def destroy
+        user = User.find_by(id: params[:id])
+        user.destroy
+        render json: { message: "user deleted"}
+    end
 end

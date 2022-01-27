@@ -3,4 +3,6 @@ class CourtsController < ApplicationController
         courts = Court.all
         render json: courts
     end
+
+    
 end

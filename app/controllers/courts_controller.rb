@@ -52,7 +52,7 @@ class CourtsController < ApplicationController
     end
   
     def destroy
-      court = current_user.courts.find_by(id: params[:id])
+      court = Court.find_by(id: params[:id])
       court.destroy
       render json: { message: "Court Deleted" }
     end

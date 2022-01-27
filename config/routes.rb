@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/courts" => "courts#index"
   get "/courts/:id" => "courts#show"
+  get "/mycourts" => "courts#userindex"
   post "/courts" => "courts#create"
   patch "/courts/:id" => "courts#update"
   delete "courts/:id" => "courts#destroy"
